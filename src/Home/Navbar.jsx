@@ -1,8 +1,26 @@
 import React from 'react';
-import { NavLink } from 'react-router';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
+import { useAuth } from '../Auth/AuthContext';
+import { CircleUserRound } from 'lucide-react';
+import { FaCircleUser } from 'react-icons/fa6';
+
+
+
+
 
 const Navbar = () => {
+
+   const {user,logOut}=useAuth()
+   const handleLogOut = () => {
+    logOut()
+      .then(result => {
+        toast.success('Successfully Logout')
+        console.log(result.user);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
 
     const getStyle = ({isActive}) => {
@@ -22,7 +40,7 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><NavLink className={getStyle} to="/">Home</NavLink></li>
                         <li><NavLink className={getStyle} to="/allProperties">All Properties</NavLink></li>
-                        <li><NavLink className={getStyle}  to="/">Add Properties</NavLink></li>
+                        <li><NavLink className={getStyle}  to="/addproperty">Add Properties</NavLink></li>
                         <li><NavLink className={getStyle}  to="/">My Properties</NavLink></li>
                         <li><NavLink className={getStyle}  to="/">My Ratings</NavLink></li>
 
@@ -34,13 +52,22 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 ">
                      <li><NavLink className={getStyle} to="/">Home</NavLink></li>
                         <li><NavLink className={getStyle} to="allProperties">All Properties</NavLink></li>
-                        <li><NavLink to="/">Add Properties</NavLink></li>
+                        <li><NavLink to="/addproperty">Add Properties</NavLink></li>
                         <li><NavLink to="/">My Properties</NavLink></li>
                         <li><NavLink to="/">My Ratings</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end ">
-                <a className="btn bg-[#415A77] text-white font-bold text-l rounded-xl">Sign In</a>
+               { !user ?
+                <Link to="/login" className="btn bg-[#415A77] text-white font-bold text-l rounded-2xl">Sign In</Link>
+            :
+            <div className='flex justify-between items-center gap-2'>
+               <p className='text-4xl text-green-500'> 
+               <FaCircleUser /></p>
+                <Link onClick={handleLogOut} className='btn bg-[#ec0c0c] text-white font-bold text-l rounded-2xl'>Logout</Link>
+            </div>
+            
+            }
             </div>
         </div>
     );
