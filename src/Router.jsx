@@ -7,6 +7,7 @@ import Login from "./Auth/Login";
 import Register from "./Auth/Register";
 import Logout from "./Auth/Logout";
 import AddProperty from "./AddProperty";
+import PrivateRoute from "./PrivateRoute";
 
 export const router =createBrowserRouter([
 
@@ -25,7 +26,11 @@ export const router =createBrowserRouter([
 },
 {
     path:"/addproperty",
-    element:<AddProperty></AddProperty>
+    element:
+    <PrivateRoute>
+
+        <AddProperty></AddProperty>
+    </PrivateRoute>
 
 },
 
