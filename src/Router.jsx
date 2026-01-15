@@ -8,6 +8,7 @@ import Register from "./Auth/Register";
 import Logout from "./Auth/Logout";
 import AddProperty from "./AddProperty";
 import PrivateRoute from "./PrivateRoute";
+import CardDetails from "./Home/CardDetails";
 
 export const router =createBrowserRouter([
 
@@ -32,6 +33,15 @@ export const router =createBrowserRouter([
         <AddProperty></AddProperty>
     </PrivateRoute>
 
+},
+{
+    path:"/property/:id",
+    element:
+    <PrivateRoute>
+
+        <CardDetails></CardDetails>
+    </PrivateRoute>
+    
 },
 
 {
