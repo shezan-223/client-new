@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Card = ({ item }) => {
     return (
-        <div className="relative w-full h-[460px] rounded-3xl overflow-hidden shadow-lg mx-auto">
+        <div className="relative w-full h-115 rounded-3xl overflow-hidden shadow-lg mx-auto">
 
             {/* Image */}
             <img
@@ -13,7 +13,7 @@ const Card = ({ item }) => {
             />
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent"></div>
 
             {/* Content */}
             <div className="absolute bottom-0 p-5 text-white w-full">
