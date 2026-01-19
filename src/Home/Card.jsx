@@ -35,16 +35,16 @@ const Card = ({ item }) => {
                         {item.location}
                     </span>
                 </div>
-            <div>
-                <p className='bg-white/20 px-3 py-1 my-1 w-fit rounded-full text-s font-bold'>{item.price}$</p>
-            </div>
+                <div>
+                    <p className='bg-white/20 px-3 py-1 my-1 w-fit rounded-full text-s font-bold'>{item.price}$</p>
+                </div>
                 {/* Button */}
 
-                <Link to={`/property/${item._id}`} > 
-                
-                <button className="w-full btn btn-primary rounded-2xl">
-                    View Details
-                </button>
+                <Link to={`/property/${item._id}`} >
+
+                    <button className="w-full btn btn-primary rounded-2xl">
+                        View Details
+                    </button>
                 </Link>
             </div>
         </div>
