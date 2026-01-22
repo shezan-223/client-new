@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useAuth } from '../Auth/AuthContext';
 import useAxiosSecure from '../Hooks/UseAxiosSecure';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router';
 
 const MyProperty = () => {
     const { user } = useAuth();
@@ -102,7 +103,10 @@ const MyProperty = () => {
                             <div className='grid grid-cols-3 gap-2 mt-4'>
                                 <button onClick={() => openEditModal(property)} className="btn btn-sm bg-[#588157] text-white">Edit</button>
                                 <button onClick={() => handledelete(property._id)} className='btn btn-sm bg-[#D00000] text-white'>Delete</button>
+                             <Link to={`/property/${property._id}`} >
+                             
                                 <button className='btn btn-sm btn-primary'>Details</button>
+                             </Link>
                             </div>
                         </div>
                     </div>

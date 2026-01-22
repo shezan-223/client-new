@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router';
 import { useAuth } from '../Auth/AuthContext';
 import { CircleUserRound } from 'lucide-react';
 import { FaCircleUser } from 'react-icons/fa6';
+import { MdHomeWork } from "react-icons/md";
 
 
 
@@ -29,7 +30,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-[#E0E1DD] shadow-sm">
+        <div className="navbar bg-[#cad0d7] shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,15 +47,15 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl alfa-slab-one-regular ">Home Nest</a>
+                <a className="btn btn-ghost text-2xl alfa-slab-one-regular "><MdHomeWork /> Home Nest</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 ">
                      <li><NavLink className={getStyle} to="/">Home</NavLink></li>
                         <li><NavLink className={getStyle} to="allProperties">All Properties</NavLink></li>
-                        <li><NavLink to="/addproperty">Add Properties</NavLink></li>
-                        <li><NavLink to="/myproperty">My Properties</NavLink></li>
-                        <li><NavLink to="/">My Ratings</NavLink></li>
+                        <li><NavLink className={getStyle} to="/addproperty">Add Properties</NavLink></li>
+                        <li><NavLink className={getStyle} to="/myproperty">My Properties</NavLink></li>
+                        <li><NavLink className={getStyle} to="/">My Ratings</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end ">
