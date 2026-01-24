@@ -1,10 +1,10 @@
 import React from 'react';
-import useAxiosSecure from '../Hooks/UseAxiosSecure';
+import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 
 const AllProperties = () => {
-    const axiosSecure = useAxiosSecure();
+    const axiosSecure = UseAxiosSecure();
 
     const { data: allProperties = [], isLoading, isError } = useQuery({
         queryKey: ["all-property"],

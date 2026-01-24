@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 const axiosSecure =axios.create({
     baseURL:'http://localhost:4000'
 })
-const useAxiosSecure = () => {
+const UseAxiosSecure = () => {
 
 const {user,logOut}=useAuth()
 const navigate =useNavigate()
@@ -46,4 +46,4 @@ useEffect(()=>{
     return axiosSecure
 };
 
-export default useAxiosSecure;
+export default UseAxiosSecure;

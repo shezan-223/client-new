@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import useAxiosSecure from '../Hooks/UseAxiosSecure';
+import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 
 const CardDetails = () => {
     const { id } = useParams();
-    const axiosSecure = useAxiosSecure();
+    const axiosSecure = UseAxiosSecure();
 
     const { data: property, isLoading, error } = useQuery({
         queryKey: ['property', id],
