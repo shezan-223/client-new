@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MyRatingsStatic = () => {
-    // স্ট্যাটিক ডেটা (এটি পরবর্তীতে আপনি এপিআই থেকে নিয়ে আসবেন)
+ 
     const staticReviews = [
         {
             id: 1,
