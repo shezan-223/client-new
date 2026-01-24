@@ -10,6 +10,7 @@ import AddProperty from "./AddProperty";
 import PrivateRoute from "./PrivateRoute";
 import CardDetails from "./Home/CardDetails";
 import MyProperty from "./Home/MyProperty";
+import MyRatings from "./MyRating";
 
 export const router =createBrowserRouter([
 
@@ -51,6 +52,11 @@ export const router =createBrowserRouter([
 
         <MyProperty></MyProperty>
     </PrivateRoute>
+},
+{
+path :"/myRating",
+element:<MyRatings></MyRatings>
+
 },
 
 {

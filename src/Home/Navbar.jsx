@@ -43,7 +43,7 @@ const Navbar = () => {
                         <li><NavLink className={getStyle} to="/allProperties">All Properties</NavLink></li>
                         <li><NavLink className={getStyle}  to="/addproperty">Add Properties</NavLink></li>
                         <li><NavLink className={getStyle}  to="/myproperty">My Properties</NavLink></li>
-                        <li><NavLink className={getStyle}  to="/">My Ratings</NavLink></li>
+                        <li><NavLink className={getStyle}  to="/myRating">My Ratings</NavLink></li>
 
                     </ul>
                 </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
                         <li><NavLink className={getStyle} to="allProperties">All Properties</NavLink></li>
                         <li><NavLink className={getStyle} to="/addproperty">Add Properties</NavLink></li>
                         <li><NavLink className={getStyle} to="/myproperty">My Properties</NavLink></li>
-                        <li><NavLink className={getStyle} to="/">My Ratings</NavLink></li>
+                        <li><NavLink className={getStyle} to="/myRating">My Ratings</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end ">

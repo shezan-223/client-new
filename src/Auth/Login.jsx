@@ -4,6 +4,7 @@ import { useAuth } from './AuthContext';
 import { useForm } from 'react-hook-form';
 import { Input } from '@headlessui/react'
 import Swal from 'sweetalert2';
+import toast from 'react-hot-toast';
 
 
 const Login = () => {
@@ -14,7 +15,8 @@ const Login = () => {
 
 
     const handleSignIn = async (data) => {
-
+        console.log("form data",data);
+        
         try {
             await signInUser(data.email, data.password)
             console.log("success ", data);
@@ -65,7 +67,7 @@ const Login = () => {
                             }
 
                             <label className="label">Password</label>
-                            <input {...register("email", { required: "password is required" })} type="password" className="input input-bordered" placeholder="Password" />
+                            <input {...register("password", { required: "password is required" })} type="password" className="input input-bordered" placeholder="Password" />
 
                             {
                                 errors.password && <span className='text-red-500  text-xs'>{errors.password.message}</span>
