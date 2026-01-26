@@ -3,14 +3,15 @@ import React from 'react';
 import { useAuth } from './Auth/AuthContext';
 import { FaArrowDown } from 'react-icons/fa6';
 import { useForm } from 'react-hook-form';
-import UseAxiosSecure from './Hooks/UseAxiosSecure';
+
 import Swal from 'sweetalert2';
+import UseAxiosSecure from './Hooks/UseAxiosSecure';
 
 const AddProperty = () => {
     const { user } = useAuth()
-
+const axiosSecure=UseAxiosSecure()
     const { register, handleSubmit, watch, reset } = useForm()
-    const axiosSecure = UseAxiosSecure()
+    
 
     const propertySubmit = async (data) => {
 

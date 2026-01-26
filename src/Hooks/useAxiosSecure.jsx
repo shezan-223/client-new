@@ -4,7 +4,7 @@ import { useAuth } from '../Auth/AuthContext';
 import { useNavigate } from 'react-router';
 
 const axiosSecure =axios.create({
-    baseURL:'http://localhost:4000'
+    baseURL:import.meta.env.VITE_API_URL
 })
 const UseAxiosSecure = () => {
 
