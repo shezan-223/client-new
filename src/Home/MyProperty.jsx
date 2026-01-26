@@ -2,13 +2,13 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../Auth/AuthContext';
-import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router';
+import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 
 const MyProperty = () => {
     const { user } = useAuth();
-    const axiosSecure = UseAxiosSecure();
+const axiosSecure=UseAxiosSecure()
     const queryClient = useQueryClient();
     const [selectedProperty, setSelectedProperty] = useState(null);
 
