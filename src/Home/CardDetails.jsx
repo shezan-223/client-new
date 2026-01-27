@@ -7,8 +7,7 @@ import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 
 const CardDetails = () => {
     const { id } = useParams();
-
-    const axiosSecure=UseAxiosSecure()
+const axiosSecure =UseAxiosSecure()
     const { data: property, isLoading, error } = useQuery({
         queryKey: ['property', id],
         queryFn: async () => {
