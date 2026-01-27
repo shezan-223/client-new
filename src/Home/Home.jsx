@@ -4,12 +4,12 @@ import { useAuth } from '../Auth/AuthContext';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router';
 import Card from './Card';
-import UseAxiosSecure from '../Hooks/UseAxiosSecure';
+import useAxiosSecure from '../Hooks/useAxiosSecure';
 
 
 const Home = () => {
     const {user}=useAuth()
-const axiosSecure=UseAxiosSecure()
+const axiosSecure=useAxiosSecure()
     const navigate =useNavigate()
    const {data:properties =[] ,isPending,error}=useQuery({
     queryKey :['latestproperties'],

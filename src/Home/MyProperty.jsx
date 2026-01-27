@@ -4,11 +4,11 @@ import { useForm } from 'react-hook-form';
 import { useAuth } from '../Auth/AuthContext';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router';
-import UseAxiosSecure from '../Hooks/UseAxiosSecure';
+import useAxiosSecure from '../Hooks/useAxiosSecure';
 
 const MyProperty = () => {
     const { user } = useAuth();
-const axiosSecure=UseAxiosSecure()
+const axiosSecure=useAxiosSecure()
     const queryClient = useQueryClient();
     const [selectedProperty, setSelectedProperty] = useState(null);
 

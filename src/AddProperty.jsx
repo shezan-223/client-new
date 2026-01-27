@@ -5,11 +5,11 @@ import { FaArrowDown } from 'react-icons/fa6';
 import { useForm } from 'react-hook-form';
 
 import Swal from 'sweetalert2';
-import UseAxiosSecure from './Hooks/UseAxiosSecure';
+import useAxiosSecure from './Hooks/useAxiosSecure';
 
 const AddProperty = () => {
     const { user } = useAuth()
-const axiosSecure=UseAxiosSecure()
+const axiosSecure=useAxiosSecure()
     const { register, handleSubmit, watch, reset } = useForm()
     
 
