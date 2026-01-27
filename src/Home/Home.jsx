@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router';
 import Card from './Card';
 import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 
+
 const Home = () => {
     const {user}=useAuth()
 const axiosSecure=UseAxiosSecure()
