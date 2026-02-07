@@ -4,7 +4,7 @@ import { useAuth } from '../Auth/AuthContext';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router';
 import Card from './Card';
-import useAxiosSecure from '../Hooks/useAxiosSecure';
+import useAxiosSecure from '../Hooks/UseAxiosSecure';
 
 
 const Home = () => {
@@ -18,7 +18,7 @@ const axiosSecure=useAxiosSecure()
         return res.data;
     }
    })
-    // if(isPending)return <span className="loading loading-ring loading-xl flex justify-center items-center text-center"></span>
+    if(isPending)return <span className="loading loading-ring loading-xl flex justify-center items-center text-center"></span>
 
     return (
         <div className='container mx-auto bg-[#C1EDF0] min-h-screen'>
